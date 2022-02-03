@@ -1,11 +1,11 @@
-
+import s from "./Profile.module.css"
 
 
 export const Profile = () => {
     return (
-        <div className="content">
+        <div className={s.content}>
             <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="page"/>
+            <img className={s.content__img} src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="page"/>
             </div>
             <div>
                 ava + description
@@ -15,11 +15,11 @@ export const Profile = () => {
                 <div>
                     New post
                 </div>
-                <div>
-                    <div>
+                <div className={s.posts}>
+                    <div className={s.item}>
                         post 1
                     </div>
-                    <div>
+                    <div className={s.item}>
                         post 2
                     </div>
                 </div>

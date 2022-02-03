@@ -1,0 +1,10 @@
+.navigation {
+    grid-area: nav;
+    background-color: rgb(211, 222, 241);
+}
+.title {
+    color: green !important;
+}
+.list {
+    margin-bottom: 5px;
+}

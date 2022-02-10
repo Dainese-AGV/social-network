@@ -1,7 +1,9 @@
-.app-wpapper {
+.app-wrapper {
   display: grid;
-  width: 100%;
-  height: 700px ;
+  justify-content: center;
+  width: 1500px;
+  height: 750px;
+  padding: 15px 15px;
 
   grid-template-areas:
     "header header header"
@@ -9,9 +11,5 @@
   grid-template-rows: 100px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-  ;
 }
-
-
-
 

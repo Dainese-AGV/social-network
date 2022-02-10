@@ -1,4 +1,17 @@
-.Dialogs {
-    background-color: darkgoldenrod;
-    height: 100%;
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  background-color: cornflowerblue;
+  height: 100%;
+  padding: 30px;
+}
+
+.dialog {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.message {
+  color: white;
+  margin-bottom: 5px;
 }

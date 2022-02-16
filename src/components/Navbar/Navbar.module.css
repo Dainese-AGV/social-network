@@ -1,0 +1,13 @@
+.navigation {
+    grid-area: nav;
+    background-color: rgb(211, 222, 241);
+    padding: 30px;
+}
+.title .activLink {
+    color: green !important;
+}
+.list a {
+    margin-bottom: 5px;
+    color: white    ;
+    text-decoration: none;
+}

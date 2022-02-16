@@ -1,14 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {App} from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter} from 'react-router-dom';
+
+
+const postData = [
+  { id: 1, message: "Hi, how are you", like: "1" },
+  { id: 2, message: "I am ok", like: "2" },
+];
+
+
+let dialogData = [
+  {id: 1 , name: "Dimych"},
+  {id: 2, name: "Andrey"},
+  {id: 3, name: "Sveta"},
+  {id: 4, name: "Sasha"},
+  {id: 5, name: "Victor"},
+  {id: 6, name: "Valera"}
+]
+
+let messegesData = [
+{id:1, message: "Hi"},
+{id:2, message: "How your mood?"},
+]
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App postData={postData} dialogData={dialogData} messegesData={messegesData}/>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

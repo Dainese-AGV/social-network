@@ -12,8 +12,8 @@ export const App = (props) => {
       <Navbar />
       <div className="app-wrapper-content"> 
         <Routes>
-          <Route path="/messages" element= { <Dialogs dialogData={props.dialogData} messegesData={props.messegesData}/> } />
-          <Route path="/profile" element= { <Profile postData={props.postData}/>}/>
+          <Route path="/messages" element={ <Dialogs dialogData={props.dialogs} messegesData={props.messages}/> } />
+          <Route path="/profile" element= { <Profile postData={props.posts}/>}/>
         </Routes>
       </div>
     </div>

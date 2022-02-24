@@ -13,7 +13,7 @@ export const App = (props) => {
       <div className="app-wrapper-content"> 
         <Routes>
           <Route path="/messages" element={ <Dialogs dialogData={props.dialogs} messegesData={props.messages}/> } />
-          <Route path="/profile" element= { <Profile postData={props.posts}/>}/>
+          <Route path="/profile" element= { <Profile postData={props.posts} titlePost={props.titlePost}/>}/>
         </Routes>
       </div>
     </div>

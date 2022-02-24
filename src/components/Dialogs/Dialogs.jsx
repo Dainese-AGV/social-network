@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import s from "./Dialogs.module.css";
+import React from "react";
 
 const DialogsItem = (props) => {
   let path = "/dialogs/" + props.id;
@@ -24,10 +25,25 @@ export const Dialogs = (props) => {
     <DialogsMessage message={message.message} />
   ));
 
+
+  let newTextArea = React.createRef();
+
+  let newBuuton = () => {
+    let text= newTextArea.current.value;
+    alert(text)
+  }
+
   return (
     <div className={s.dialogs}>
       <div className={s.dialogItem}>{dialogsElement}</div>
       <div className={s.messages}>{messagesElement}</div>
+
+
+      
+      <textarea ref={newTextArea}></textarea>
+      <button onClick={newBuuton}></button>
     </div>
   );
+  
 };
+

@@ -6,6 +6,8 @@ export const state = {
       { id: 1, message: "Hi, how are you", like: "1" },
       { id: 2, message: "I am ok", like: "2" },
     ],
+    newPostText: "",
+
     dialogData: [
       { id: 1, name: "Dimych" },
       { id: 2, name: "Andrey" },
@@ -23,12 +25,16 @@ export const state = {
   },
 };
 
-export let titlePost = (postMessage) => {
+export let titlePost = () => {
   let newPost = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     like: 5,
   };
   state.profilePage.postData.push(newPost);
-  renderEntireTree(state)
+  renderEntireTree(state);
+};
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  renderEntireTree(state);
 };

@@ -10,18 +10,20 @@ export const Mypost = (props) => {
 let newAddPost = React.createRef();
 
 let addPost = (state) => {
-  let text = newAddPost.current.value;
-  props.titlePost(text)
-  newAddPost.current.value = "";
+  props.titlePost()
+  props.updateNewPostText('');
 }
-
+let onPostChange = () => {
+let text = newAddPost.current.value;
+props.updateNewPostText(text);
+}
 
 
   return (
     <div>
       My post
       <div>
-        <textarea ref={newAddPost}></textarea>
+        <textarea onChange={onPostChange} ref={newAddPost} value={props.newPostText}/>
         <button onClick={addPost}>Add Post</button>
       </div>
       <div className={s.posts}>{postElement}</div>

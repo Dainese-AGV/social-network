@@ -6,7 +6,7 @@ export const Profile = (props) => {
   return (
     <div className={s.content}>
       <Profileinfo dialogData={props.dialogData} messegesData={props.messegesData}/>
-      <Mypost postData={props.postData} titlePost={props.titlePost}/>
+      <Mypost postData={props.postData} titlePost={props.titlePost} newPostText={props.newPostText} updateNewPostText={props.updateNewPostText}/>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { titlePost} from "./components/Redux/State";
+import { titlePost, updateNewPostText} from "./components/Redux/State";
 
 export const renderEntireTree = (state) => {
   ReactDOM.render(
@@ -14,6 +14,9 @@ export const renderEntireTree = (state) => {
           dialogs={state.profilePage.dialogData}
           messages={state.messagesPage.messegesData}
           titlePost={titlePost}
+          newPostText={state.profilePage.newPostText}
+          updateNewPostText={updateNewPostText}
+    
         />
       </BrowserRouter>
     </React.StrictMode>,

@@ -27,6 +27,7 @@ props.updateNewPostText(text);
         <button onClick={addPost}>Add Post</button>
       </div>
       <div className={s.posts}>{postElement}</div>
+      <div className={s.posts}>{postElement}</div>
     </div>
   );
 };

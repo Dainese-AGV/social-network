@@ -38,3 +38,4 @@ export let updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
   renderEntireTree(state);
 };
+

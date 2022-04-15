@@ -10,10 +10,28 @@ export const App = (props) => {
     <div className="app-wrapper">
       <Header />
       <Navbar />
-      <div className="app-wrapper-content"> 
+      <div className="app-wrapper-content">
         <Routes>
-          <Route path="/messages" element={ <Dialogs dialogData={props.dialogs} messegesData={props.messages}/> } />
-          <Route path="/profile" element= { <Profile postData={props.posts} titlePost={props.titlePost} newPostText={props.newPostText} updateNewPostText={props.updateNewPostText} />}/>
+          <Route
+            path="/messages"
+            element={
+              <Dialogs
+                dialogData={props.dialogs}
+                messegesData={props.messages}
+              />
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <Profile
+                postData={props.posts}
+                titlePost={props.titlePost}
+                newPostText={props.newPostText}
+                updateNewPostText={props.updateNewPostText}
+              />
+            }
+          />
         </Routes>
       </div>
     </div>

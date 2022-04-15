@@ -6,5 +6,6 @@ import { renderEntireTree } from './render';
 
 
 
-renderEntireTree(state)
+renderEntireTree(state);
+
 

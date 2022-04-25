@@ -10,12 +10,12 @@ export const Mypost = (props) => {
   let newAddPost = React.createRef();
 
   let addPost = () => {
-    props.titlePost();
-    props.updateNewPostText("");
+    props.dispatch({ type: "ADD-POST" });
   };
   let onPostChange = () => {
     let text = newAddPost.current.value;
-    props.updateNewPostText(text);
+    let action = { type: "UPDATE-NEW-POST-TEXT", newText: text };
+    props.dispatch(action);
   };
 
   return (

@@ -26,9 +26,9 @@ export const App = (props) => {
             element={
               <Profile
                 postData={props.posts}
-                titlePost={props.titlePost}
+                dispatch={props.dispatch}
                 newPostText={props.newPostText}
-                updateNewPostText={props.updateNewPostText}
+                // updateNewPostText={props.updateNewPostText}
               />
             }
           />

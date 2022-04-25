@@ -11,18 +11,11 @@ export const renderEntireTree = (state) => {
     <React.StrictMode>
       <BrowserRouter>
         <App
-          // posts={store._state.profilePage.postData}
-          // dialogs={state.profilePage.dialogData}
-          // messages={state.messagesPage.messegesData}
-          // titlePost={store.titlePost}
-          // newPostText={state.profilePage.newPostText}
-          // updateNewPostText={store.updateNewPostText}
           posts={store.getState().profilePage.postData}
           dialogs={store.getState().profilePage.dialogData}
           messages={store.getState().messagesPage.messegesData}
-          titlePost={store.titlePost.bind(store)}
+          dispatch={store.dispatch.bind(store)}
           newPostText={store.getState().profilePage.newPostText}
-          updateNewPostText={store.updateNewPostText.bind(store)}
         />
       </BrowserRouter>
     </React.StrictMode>,
